@@ -803,7 +803,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .other_content {padding-bottom:18px;}
 .cpp_pass_wrap .other_content .item {display:flex; align-items:center; gap:12px; padding-left:50px;;}
 .cpp_pass_wrap .other_content .item + .item {margin-top:8px;}
-.cpp_pass_wrap .other_content .item span.icon {width:60px; min-width:60px;}
+.cpp_pass_wrap .other_content .item span.icon {width:60px; min-width:60px; background-color:#f7f7f7; border-radius:6px; overflow:hidden;}
 .cpp_pass_wrap .other_content .item div.txt_wrap {}
 .cpp_pass_wrap .other_content .item div.txt_wrap div.tit {color:#000; font-size:14px; line-height:1.42857em;}
 .cpp_pass_wrap .other_content .item div.txt_wrap p.txt {color:#888; font-size:12px; line-height:1.5em;}
