@@ -18,11 +18,19 @@
 <div class="cp_wrap">
 	<div class="cp_header"><img src="../images/temp/top_sub_back.png" alt="샘플" /></div><!-- 개발시 삭제 -->
 
+	<!-- <div class="scrollDownAlert">
+		<p>화면을 아래로 내리면 쿠폰 상태를 새로고침 할 수 있습니다.</p>
+	</div> -->
+
+	<div class="scrollDownRefresh"><img src="../images/ico_refresh_l.png" alt="새로고침"></div>
+
 	<div class="header_tab">
 		<ul class="col3">
-			<li><span>쿠폰팩</span></li>
+			<li><span>홈</span></li>
+			<!-- <li><span>쿠폰팩</span></li> -->
 			<li class="on"><span>쿠폰 관리</span></li>
 			<li><span>내 구독 쿠폰</span></li>
+			<li><span>전체</span></li>
 		</ul>
 	</div>
 
@@ -40,6 +48,7 @@
 				</dl>
 			</div>
 			<button type="button" class="btn_add"><span>쿠폰∙상품권 등록하기</span></button>
+			<button type="button" class="btn_autoadd"><span>쿠폰∙상품권 자동 등록하기</span></button>
 			<div class="tools"><span class="txt">쿠폰∙상품권 등록하기</span>   <a href="#test2222" class="help"><img src="../images/ico_list_question_w.png" alt=""></a></div>
 		</div>
 	</div><!-- // safely_card -->
@@ -47,7 +56,8 @@
 	<div class="header_tab">
 		<ul class="col2">
 			<li><span>사용 가능 쿠폰∙상품권</span></li>
-			<li class="on"><span>지난 쿠폰∙상품권</span></li>
+			<!-- <li class="on"><span>지난 쿠폰∙상품권</span></li> -->
+			<li class="on"><span>전체</span></li>
 		</ul>
 	</div>
 
@@ -55,6 +65,24 @@
 		<div class="conponPack_group">
 			<div class="group_tit">
 				<p>최근 1년 이내 내역만 조회할 수 있습니다.</p>
+				<!-- <div>
+					<select name="" id="">
+						<option value="최근 사용순">최근 사용순</option>
+						<option value="전체">전체</option>
+					</select>
+				</div> -->
+			</div>
+
+			<div class="group_tit">
+				<div class="select_filter">
+					<select name="" id="">
+						<option value="전체">전체</option>
+						<option value="사용가능">사용가능</option>
+						<option value="정보수정">정보수정</option>
+						<option value="기한만료">기한만료</option>
+						<option value="사용완료">사용완료</option>
+					</select>
+				</div>
 				<div>
 					<select name="" id="">
 						<option value="최근 사용순">최근 사용순</option>
@@ -62,6 +90,7 @@
 					</select>
 				</div>
 			</div>
+			
 			
 			<div class="couponPack_detail_list">
 				<ul>
@@ -73,14 +102,14 @@
 									<dd class="txt">
 										<p>주유 3천원 할인 쿠폰</p>
 										<!-- <span class="endDay">D-7</span> -->
-										<!-- <span class="endDay">오늘 만료</span> -->
+										<span class="endDay">오늘 만료</span>
 									</dd>
-									<dd class="date">2022.08.25~2022.08.31</dd>
+									<dd class="date">~2024.08.31</dd>
 								</dl>
 								<div class="line"><span>보기</span></div>
 							</div>
 						</div>
-						<span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span>
+						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
 						<!-- <span class="img"><img src="../images/icon_stamp_expire.png" alt="사용완료"></span> -->
 					</li>
 					<li>
@@ -93,13 +122,13 @@
 										<!-- <span class="endDay">D-7</span> -->
 										<!-- <span class="endDay">오늘 만료</span> -->
 									</dd>
-									<dd class="date">2022.08.25~2022.08.31</dd>
+									<dd class="date">~2024.08.31</dd>
 								</dl>
 								<div class="line"><span>보기</span></div>
 							</div>
 						</div>
-						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
-						<span class="img"><img src="../images/icon_stamp_expire.png" alt="기한만료"></span>
+						<span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span>
+						<!-- <span class="img"><img src="../images/icon_stamp_expire.png" alt="기한만료"></span> -->
 					</li>
 					<li>
 						<div class="couponPack_detail_item disabled">
@@ -111,13 +140,13 @@
 										<!-- <span class="endDay">D-7</span> -->
 										<!-- <span class="endDay">오늘 만료</span> -->
 									</dd>
-									<dd class="date">2022.08.25~2022.08.31</dd>
+									<dd class="date">~2024.08.31</dd>
 								</dl>
 								<div class="line"><span>보기</span></div>
 							</div>
 						</div>
 						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
-						<span class="img"><img src="../images/icon_stamp_expire.png" alt="기한만료"></span>
+						<span class="img"><img src="../images/icon_stamp_edited.png" alt="정보수정"></span>
 					</li>
 					<li>
 						<div class="couponPack_detail_item disabled">
@@ -129,7 +158,7 @@
 										<!-- <span class="endDay">D-7</span> -->
 										<!-- <span class="endDay">오늘 만료</span> -->
 									</dd>
-									<dd class="date">2022.08.25~2022.08.31</dd>
+									<dd class="date">~2024.08.31</dd>
 								</dl>
 								<div class="line"><span>보기</span></div>
 							</div>

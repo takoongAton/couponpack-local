@@ -25,9 +25,8 @@
 	<div class="header_tab">
 		<ul class="col3">
 			<li><span>홈</span></li>
-			<!-- <li><span>쿠폰팩</span></li> -->
-			<li class="on"><span>쿠폰 관리</span></li>
-			<li><span>내 구독 쿠폰</span></li>
+			<li><span>쿠폰 관리</span></li>
+			<li class="on"><span>내 구독 쿠폰</span></li>
 			<li><span>전체</span></li>
 		</ul>
 	</div>
@@ -53,16 +52,15 @@
 
 	<div class="header_tab">
 		<ul class="col2">
-			<li class="on"><span>사용 가능 쿠폰∙상품권</span></li>
-			<!-- <li><span>지난 쿠폰∙상품권</span></li> -->
-			<li><span>전체</span></li>
+			<li><span>사용 가능 쿠폰∙상품권</span></li>
+			<li class="on"><span>전체</span></li>
 		</ul>
 	</div>
 
 	<div class="couponPack_group_wrap">
 		<div class="conponPack_group">
 			<div class="group_tit">
-				<p>&nbsp;</p><!-- 태그 있어야 함. -->
+				<p>최근 1년 이내 내역만 조회할 수 있습니다.</p><!-- 태그 있어야 함. -->
 				<div>
 					<select name="" id="">
 						<option value="만료순">만료순</option>
@@ -70,71 +68,15 @@
 					</select>
 				</div>
 			</div>
-			
-			<div class="couponPack_detail_list">
-				<ul>
-					<li>
-						<div class="couponPack_detail_item">
-							<div class="inner">
-								<dl>
-									<dt class="tit">스타벅스</dt>
-									<dd class="txt">
-										<p>아메리카노 TALL 1잔</p>
-										<!-- <span class="endDay">D-7</span> -->
-										<span class="endDay">오늘 만료</span>
-									</dd>
-									<dd class="date">~2024.08.31</dd>
-								</dl>
-								<div class="line"><span>보기</span></div>
-							</div>
-						</div>
-						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
-						<!-- <span class="img"><img src="../images/icon_stamp_expire.png" alt="사용완료"></span> -->
-					</li>
-					<li>
-						<div class="couponPack_detail_item">
-							<div class="inner">
-								<dl>
-									<dt class="tit">스타벅스</dt>
-									<dd class="txt">
-										<p>아메리카노 TALL 1잔</p>
-										<span class="endDay">D-7</span>
-										<!-- <span class="endDay">오늘 만료</span> -->
-									</dd>
-									<dd class="date">~2024.08.31</dd>
-								</dl>
-								<div class="line"><span>보기</span></div>
-							</div>
-						</div>
-						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
-						<!-- <span class="img"><img src="../images/icon_stamp_expire.png" alt="기한만료"></span> -->
-					</li>
-					<li>
-						<div class="couponPack_detail_item">
-							<div class="inner">
-								<dl>
-									<dt class="tit">스타벅스</dt>
-									<dd class="txt">
-										<p>아메리카노 TALL 1잔</p>
-										<!-- <span class="endDay">D-7</span> -->
-										<!-- <span class="endDay">오늘 만료</span> -->
-									</dd>
-									<dd class="date">~2024.08.31</dd>
-								</dl>
-								<div class="line"><span>보기</span></div>
-							</div>
-						</div>
-						<!-- <span class="img"><img src="../images/icon_stamp_used.png" alt="사용완료"></span> -->
-						<!-- <span class="img"><img src="../images/icon_stamp_expire.png" alt="기한만료"></span> -->
-					</li>
-				</ul>
-			</div>
-		</div><!-- // conponPack_group -->
-
-		
-		<button type="button" class="btn_more"><span>더보기</span></button>
+		</div>
+		<div class="nodata">
+			<span class="icon"><img src="../images/icon_alert.png" alt=""></span>
+			<p>조회되는 쿠폰∙상품권이 없습니다.</p>
+			<!-- <p>지난 쿠폰∙상품권이 없습니다.</p> -->
+		</div>
 	</div><!-- // couponPack_group_wrap -->
 
+	
 	<div class="couponPack_footer">
 		<ul>
 			<li><a href="#g"><span class="icon"><img src="../images/ico_notice.png" alt=""></span><span class="txt">공지사항</span></a></li>
@@ -142,22 +84,6 @@
 			<li><a href="#g"><span class="icon"><img src="../images/ico_guide.png" alt=""></span><span class="txt">이용안내</span></a></li>
 		</ul>
 	</div><!-- // couponPack_footer -->
-
-	<footer>
-		<div class="info">
-			<p>서비스 제공사 : (주)아톤</p>
-			<p>서비스 가입/이용/해지문의 : 080-869-4273(무료)</p>
-			<p class="email">atcs@atoncorp.com</p>
-			<p>본 서비스의 쿠폰 발행은 ㈜스퀘어노트에서 대행합니다.</p>
-		</div>
-		<div class="f_alert">
-			<ul>
-				<li><p>본 서비스는 가입 즉시 서비스가 개시되는 상품으로 청약철회가 불가능합니다. (전자상거래 등에서의 소비자보호에 관한 법률 제17조 2항 5호에 따라 디지털 콘텐츠의 제공이 개시된 경우 청약철회를 제공하지 않습니다.)</p></li>
-				<li><p>PASS 쿠폰팩은 제휴 혜택 유형의 패키지 상품으로 월 1회 선택된 상품의 혜택을 쿠폰으로 제공합니다.</p></li>
-				<li><p>패키지 상품은 제휴 회사의 사정에 따라 변경될 수 있습니다.</p></li>
-			</ul>
-		</div>
-	</footer>
 
 </div><!-- // cp_wrap -->
 
@@ -195,6 +121,12 @@
 
 <script src="../js/temp.js"></script>
 
-
+<script>
+	$(document).ready(function(){
+	
+		layer_tooltip($("a.help"));
+	
+	})
+	</script>
 </body>
 </html>

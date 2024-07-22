@@ -32,13 +32,14 @@ html.fixed {height:100%; overflow:hidden;}
 .header_tab ul {display:flex; justify-content:flex-start; gap:18px; position:relative; width:100%; padding:0 20px;}
 .header_tab ul::after {content:""; display:block; position:absolute; bottom:0; left:0; width:100%; border-bottom:1px solid #e7e7e7;}
 /* .header_tab ul li {width:100%; text-align:center;} */
-.header_tab ul li span {display:block; position:relative; height:36px; color:#999; font-weight:700; font-size:14px; line-height:36px;}
+.header_tab ul li span {display:block; position:relative; padding:14px 0 8px; color:#999; font-weight:400; font-size:14px; line-height:1.42857em;}
 /* .header_tab ul.col5 li {width:20%;}
 .header_tab ul.col4 li {width:25%;}
-.header_tab ul.col3 li {width:33.3%;}
-.header_tab ul.col2 li {width:50%;} */
+.header_tab ul.col3 li {width:33.3%;} */
+.header_tab ul.col2 {gap:0;}
+.header_tab ul.col2 li {width:50%; text-align:center;}
 .header_tab ul li.on {z-index:1;}
-.header_tab ul li.on span {color:#000; border-color:#000;}
+.header_tab ul li.on span {border-color:#000; color:#000; font-weight:700;}
 .header_tab ul li.on span::before {content:""; display:block; position:absolute; bottom:0; left:0; width:100%; height:2px; background-color:#000;}
 
 
@@ -305,10 +306,18 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 /* 내 구독팩 그룹 타이틀 */
 .conponPack_group .group_tit {display:flex; justify-content:space-between; align-items:center; height:24px;}
 .conponPack_group .group_tit h3 {color:#000; font-size:16px; line-height:1.5em;}
-.conponPack_group .group_tit p {color:#555; font-size:13px; line-height:24px;}
+.conponPack_group .group_tit p {color:#555; font-size:12px; line-height:24px;}
 .conponPack_group .group_tit div {position:relative;}
 .conponPack_group .group_tit div::before {content:""; display:block; position:absolute; top:50%; right:5px; width:5px; height:5px; border-bottom:1px solid #555; border-right:1px solid #555; transform:translateY(-65%) rotate(45deg); transform-origin:50% 50%;}
 .conponPack_group .group_tit select {position:relative; width:auto; height:24px; margin:0; padding:0; padding-right:16px; background-color:transparent; border:none; color:#555; font-size:12px; text-align:right; vertical-align:top;}
+
+/* 쿠폰팩 목록 필터 */
+.conponPack_group .group_tit + .group_tit {margin-top:12px;}
+.conponPack_group .group_tit div.select_filter {}
+.conponPack_group .group_tit div.select_filter::before {width:18px; height:18px; border:none; transform:rotate(0) translateY(-50%); background:url('../images/btn_arrow_list_d.png') no-repeat right center / 18px 18px;}
+.conponPack_group .group_tit div.select_filter select {min-width:96px; width:auto; height:37px; padding-left:8px; border-bottom:1px solid #000; color:#000; font-size:14px; text-align:left;}
+.conponPack_group .group_tit div.select_filter select option {color:#000; font-size:14px;}
+/* // 쿠폰팩 목록 필터 */
 
 
 .couponPack_detail_list {margin-top:14px;}
@@ -327,6 +336,13 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .couponPack_detail_item .inner dl dt.tit {color:#333; font-size:12px; line-height:1.5em;}
 .couponPack_detail_item .inner dl dd.txt p {font-size:16px; line-height:1.25em; font-weight:bold; text-overflow:ellipsis; word-wrap:break-word; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; padding-right:1em;}
 .couponPack_detail_item .inner dl dd.txt .endDay {display:flex; justify-content:center; align-items:center; position:absolute; top:10px; right:10px; width:50px; height:18px; padding:0 5px; background-color:#fc3a4a; border-radius:4px; color:#fff; font-size:10px; line-height:1em; letter-spacing:0; box-shadow:2px 2px 5px rgba(0,0,0,0.1); white-space:nowrap;}
+.couponPack_detail_item .inner dl dd.txt .endDay::before {content:""; display:block; position:absolute; bottom:0; width:0; height:0; 
+	border-left:4px solid transparent;
+	border-right:4px solid transparent;
+	border-top:4px solid #FC3A4A;
+	font-size:0;
+	transform:translateY(calc(100% - 1px));
+}
 .couponPack_detail_item .inner dl dd.date {margin-top:7px; color:#999; font-size:12px; line-height:1.5em;}
 .couponPack_detail_item .inner > div.line {display:flex; justify-content:center; align-items:center; position:relative; width:19.40298%; max-width:64px; height:100px; border-left:1px dashed #f0f0f0;}
 .couponPack_detail_item .inner > div.line::before,
@@ -340,7 +356,7 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .couponPack_detail_item.disabled div.line span {opacity:0.2;}
 
 .couponPack_group_wrap .btn_more {margin-top:10px; padding:10px 0;}
-.couponPack_group_wrap .btn_more span {display:inline-block; position:relative; padding-left:18px; font-size:14px; line-height:1em;}
+.couponPack_group_wrap .btn_more span {display:inline-block; position:relative; padding-left:18px; font-size:14px; line-height:1em; font-weight:500;}
 .couponPack_group_wrap .btn_more span::before,
 .couponPack_group_wrap .btn_more span::after {content:""; display:block; position:absolute; top:50%; background-color:#000; border-radius:1px; transform:translateY(-50%);}
 .couponPack_group_wrap .btn_more span::before {left:0; width:11px; height:1px;}
@@ -351,6 +367,17 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .couponPack_group_wrap div.nodata p {margin-top:12px; color:#666; font-size:16px;}
 
 
+/* 스크롤 다운 새로고침 안내 팝업 */
+.scrollDownAlert {padding:0 20px; animation: scrollAlert 0.2s 3s 1 forwards ease-in;}
+.scrollDownAlert p {padding:12px 20px; border-radius:6px; background-color:#F8F9FB; color:#333; font-size:12px; line-height:1.5em; font-weight:400;}
+/* @keyframes scrollAlert {
+	0% {display:block; height:42px;}
+	100% {display:none; height:0;}
+} */
+
+.scrollDownRefresh {text-align:center;}
+.scrollDownRefresh img {display:inline-block; width:42px; height:42px;}
+/* // 스크롤 다운 새로고침 안내 팝업 */
 
 
 
@@ -403,7 +430,7 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .couponDetailForm dl dt {display:flex; justify-content:flex-start; align-items:center;}
 .couponDetailForm dl dt * {vertical-align:top;}
 .couponDetailForm dl dt strong {display:inline-block; color:#888; font-size:12px; font-weight:400; line-height:18px;}
-.couponDetailForm dl dt span.req {display:inline-block; color:#fc3a4a; font-size:12px; line-height:18px;}
+.couponDetailForm dl dt span.req {display:inline-block; margin-left:0.25em; color:#fc3a4a; font-size:12px; line-height:18px; font-weight:bold;}
 .couponDetailForm dl dt a {display:inline-block; width:18px; height:18px;}
 .couponDetailForm dl dd {margin-top:8px;}
 .couponDetailForm dl dd div {padding-bottom:3px;}
@@ -416,15 +443,19 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .couponDetailForm dd > div input {display:block; width:100%; border:none; background-color:transparent;}
 .couponDetailForm dd > div label {display:flex; justify-content:space-between;}
 .couponDetailForm dd > span {display:inline-flex; justify-content:center; min-width:20px; text-align:center;}
-.couponDetailForm dl dd div.iptItem .icon_cal {display:block; width:24px; height:24px;}
+.couponDetailForm dl dd div.iptItem .icon_cal {display:block; width:24px; min-width:24px; height:24px;}
 .couponDetailForm dl dd div.iptItem .icon_cal img {display:block;}
 
 .couponDetailForm > p {margin-top:6px; font-size:12px; color:#888;}
 .couponDetailForm > p span {color:#fc3a4a;}
 
+.coupon_add + .couponDetailForm dl dt strong {color:#000;}
+/* 쿠폰 상세 입력폼 */
+
+
 /* 쿠폰 상세 버튼 */
 /* .couponEditBtnGroup {display:flex; justify-content:space-between; column-gap:10px; width:100%; margin-top:30px; padding:0 20px;} */
-.couponEditBtnGroup {display:grid; grid-template-columns: auto auto auto; column-gap:10px; justify-content:stretch; width:100%; margin-top:30px; padding:0 20px;}
+.couponEditBtnGroup {display:grid; grid-template-columns: auto auto auto; column-gap:10px; justify-content:stretch; width:100%; margin-top:10px; padding:0 20px;}
 .couponEditBtnGroup div {width:100%;}
 .couponEditBtnGroup div button {display:flex; justify-content:center; align-items:center; width:100%; height:40px; background-color:rgba(51,51,51,1); border-radius:4px; color:#fff; font-size:14px; text-align:center; text-decoration:none !important;}
 .couponEditBtnGroup div button:disabled {background-color:rgba(0,0,0,0.06) !important; color:#bbb !important;}
@@ -475,6 +506,8 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 .safely_card .safely_card_my .remain dl dd span {display:inline-block; font-size:18px; line-height:1em;}
 .safely_card .safely_card_my button.btn_add {height:44px; margin-top:20px; background-color:#fff; border-radius:100px; color:#413793;}
 .safely_card .safely_card_my button.btn_add span {display:block; font-size:14px; line-height:1em; font-weight:bold;}
+.safely_card .safely_card_my button.btn_autoadd {height:44px; margin-top:10px; background-color:#fff; border-radius:100px; color:#413793;}
+.safely_card .safely_card_my button.btn_autoadd span {display:block; font-size:14px; line-height:1em; font-weight:bold;}
 .safely_card .safely_card_my div.tools {display:flex; justify-content:center; align-items:center; margin-top:12px; text-align:center; line-height:19px;}
 .safely_card .safely_card_my div.tools span.txt {display:inline-block; color:#fff; font-size:12px; line-height:18px;}
 .safely_card .safely_card_my div.tools a.help {display:inline-block; width:18px; height:18px; margin-left:0.25em; color:#fff;}
@@ -706,10 +739,10 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 
 
 /* pass 메인 쿠폰팩 */
-/* .cpp_pass_wrap {font-size:4.44444vw;} */
+/* .cpp_pass_wrap {font-size:4.44444vw;}
 @media screen and (min-width:720px) {
-	/* .cpp_pass_wrap {font-size:32px;} */
-}
+	.cpp_pass_wrap {font-size:32px;}
+} */
 
 .cpp_pass_wrap .cpp_pass_tit {padding:1.125em 1.125em 1.25em 1.125em;}
 .cpp_pass_wrap .cpp_pass_tit p.tit {color:#000; font-size:1.125em; line-height:1.5em; font-weight:bold;}
@@ -717,7 +750,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 
 
 
-
+/* 기존 내용 삭제
 .cpp_pass_wrap .cpp_pass_visual {display:flex; justify-content:space-between; padding:1.875em 1.125em; background-color:#f0f2f4;}
 .cpp_pass_wrap .cpp_pass_visual * {vertical-align:top;}
 .cpp_pass_wrap .cpp_pass_visual .box {width:11.375em; padding:1em 0 0.75em; background-color:#fff; border-radius:0.625em; text-align:center;}
@@ -780,6 +813,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .cpp_pass_alert dt {font-size:0.875em;}
 .cpp_pass_wrap .cpp_pass_alert dt + dd {margin-top:0.25em;}
 .cpp_pass_wrap .cpp_pass_alert dd p {color:#999; font-size:0.875em;}
+*/
 
 
 /* pass 쿠폰팩 혜택+ */
@@ -820,6 +854,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 	.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide {border-radius:10px; transition-delay:0.1s; transform:scale(0.85);}
 	.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide.slick-active {transform:scale(0.95); opacity:1;}
 }
+/* // pass 쿠폰팩 혜택+ */
 /* pass 메인 쿠폰팩 */
 
 
