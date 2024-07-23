@@ -369,7 +369,7 @@ p.couponSale + p.couponPrice {margin-left:6px;}
 
 /* 스크롤 다운 새로고침 안내 팝업 */
 .scrollDownAlert {padding:0 20px; animation: scrollAlert 0.2s 3s 1 forwards ease-in;}
-.scrollDownAlert p {padding:12px 20px; border-radius:6px; background-color:#F8F9FB; color:#333; font-size:12px; line-height:1.5em; font-weight:400;}
+.scrollDownAlert p {padding:12px 20px; border-radius:6px; background-color:#F8F9FB; color:#333; font-size:12px; line-height:1.5em; font-weight:400; text-align:center;}
 /* @keyframes scrollAlert {
 	0% {display:block; height:42px;}
 	100% {display:none; height:0;}
