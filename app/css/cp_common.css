@@ -715,10 +715,11 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 
 .cp_cancel_wrap .cancel_tab {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%;}
 .cp_cancel_wrap .cancel_tab::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; width:100%; height:1px; background-color:#ddd;}
-.cp_cancel_wrap .cancel_tab a {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:42px; line-height:1em; text-decoration:none;}
+.cp_cancel_wrap .cancel_tab div {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:42px; line-height:1em;}
+.cp_cancel_wrap .cancel_tab a {display:flex; justify-content:center; align-items:center; width:100%; height:42px; text-decoration:none;}
 .cp_cancel_wrap .cancel_tab a span {display:inline-block; color:#999999; font-size:14px; line-height:20px;}
-.cp_cancel_wrap .cancel_tab a.active span {color:#000; font-weight:bold;}
-.cp_cancel_wrap .cancel_tab a.active::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; width:100%; height:2px; background-color:#000;}
+.cp_cancel_wrap .cancel_tab div.active span {color:#000; font-weight:bold;}
+.cp_cancel_wrap .cancel_tab div.active::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; width:100%; height:2px; background-color:#000;}
 
 .cp_cancel_wrap .cp_cancel_top {padding:0 1.125em; text-align:center;}
 .cp_cancel_wrap .cp_cancel_top div.img {padding:28px 0 18px;}
