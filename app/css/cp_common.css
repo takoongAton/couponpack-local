@@ -710,15 +710,24 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 
 
 /* 외부 해지 프로세스 */
-.cp_cancel_wrap {display:flex; flex-direction:column; justify-content:space-between; width:100%; height:100%; padding:2.5em 1.125em 1.875em;}
-.cp_cancel_wrap .cp_cancel_top {text-align:center;}
+.cp_cancel_wrap {display:flex; flex-direction:column; justify-content:space-between; width:100%; height:100%;}
+.cp_cancel_wrap > p.tit {height:48px; line-height:48px; color:#000; font-weight:bold; text-align:center;}
+
+.cp_cancel_wrap .cancel_tab {display:flex; justify-content:space-between; align-items:center; position:relative; width:100%;}
+.cp_cancel_wrap .cancel_tab::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; width:100%; height:1px; background-color:#ddd;}
+.cp_cancel_wrap .cancel_tab a {display:flex; justify-content:center; align-items:center; position:relative; width:100%; height:42px; line-height:1em; text-decoration:none;}
+.cp_cancel_wrap .cancel_tab a span {display:inline-block; color:#999999; font-size:14px; line-height:20px;}
+.cp_cancel_wrap .cancel_tab a.active span {color:#000; font-weight:bold;}
+.cp_cancel_wrap .cancel_tab a.active::before {content:""; display:block; position:absolute; right:0; bottom:0; left:0; width:100%; height:2px; background-color:#000;}
+
+.cp_cancel_wrap .cp_cancel_top {padding:0 1.125em; text-align:center;}
 .cp_cancel_wrap .cp_cancel_top div.img {padding:28px 0 18px;}
 .cp_cancel_wrap .cp_cancel_top img {width:100px; height:100px; vertical-align:top;}
-.cp_cancel_wrap .cp_cancel_top .tit {color:#ff3a4a; font-size:1.25em; line-height:1.1.45em; font-weight:bold; text-align:center;}
+/* .cp_cancel_wrap .cp_cancel_top .tit {color:#ff3a4a; font-size:1.25em; line-height:1.1.45em; font-weight:bold; text-align:center;} */
 .cp_cancel_wrap .cp_cancel_top .txt {position:relative; padding-left:0.75em; color:#999; font-size:0.875em; line-height:1.5em; text-align:left;}
 .cp_cancel_wrap .cp_cancel_top .txt::before {content:"* "; display:block; position:absolute; top:0; left:0; font-size:inherit; line-height:inherit;}
 
-.cp_cancel_wrap .cp_cancel_contact {margin-top:3.75em;}
+.cp_cancel_wrap .cp_cancel_contact {margin-top:3.75em; padding:0 1.125em 1.875em;}
 .cp_cancel_wrap .cp_cancel_contact .form input,
 .cp_cancel_wrap .cp_cancel_contact .form select {height:2.25em; background-color:#fff; border:0; border-bottom:1px solid #ddd;}
 .cp_cancel_wrap .cp_cancel_contact .form select {width:7.25em;}
@@ -734,7 +743,7 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cp_cancel_wrap .cancel_footer {margin-top:1.875em; text-align:center;}
 .cp_cancel_wrap .cancel_footer button {height:3em; background-color:#ff3a4a; border-radius:0.375em; color:#fff;}
 .cp_cancel_wrap .cancel_footer p {padding:10px 0 0; color:#888888; font-size:0.75em; line-height:1.5em;}
-
+/* // 외부 해지 프로세스 */
 
 
 
@@ -844,12 +853,12 @@ footer div.f_alert p::before {content:"·"; display:block; position:absolute; to
 .cpp_pass_wrap .other_content .item div.txt_wrap p.txt {color:#888; font-size:12px; line-height:1.5em;}
 .cpp_pass_wrap #steadySeller {display:none;}
 .cpp_pass_wrap #steadySeller.active {display:block;}
-.slick-list {padding:0 60px !important;}
+.cpp_pass_wrap .slick-list {padding:0 60px !important;}
 @media screen and (min-width:393px) {
-	.slick-list {padding:0 70px !important;}
+	.cpp_pass_wrap .slick-list {padding:0 70px !important;}
 }
 @media screen and (min-width: 674px) {
-	.slick-list {padding:0 84px !important;}
+	.cpp_pass_wrap .slick-list {padding:0 84px !important;}
 	.cpp_pass_wrap .cpp_pass_slick_wrap {padding:0;}
 	.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide {border-radius:10px; transition-delay:0.1s; transform:scale(0.85);}
 	.cpp_pass_wrap .cpp_pass_slick_wrap .slick-slide.slick-active {transform:scale(0.95); opacity:1;}
