@@ -482,6 +482,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .input_form div.list .item div.tit span {display:inline-block; font-size:14px; line-height:20px; font-weight:500;}
 .input_form div.list .item div.tit strong {color:#000;}
 .input_form div.list .item div.tit span {color:#FF0000;}
+.input_form div.list .item div.tit span.tel {color:#000; font-weight:400;}
 .input_form div.list .item div.tit select {color:#000; font-size:14px; line-height:20px; font-weight:500; border:none;}
 .input_form div.list .item div.tit select option {color:#000;}
 .input_form div.list .item div.set_ipt {display:flex; align-items:center; flex:1;}
@@ -502,6 +503,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 	.input_form div.list .item div.tit {min-width:168px;}
 	.input_form div.list .item div.tit strong,
 	.input_form div.list .item div.tit span {font-size:20px; line-height:29px;}
+	.input_form div.list .item div.tit span.tel {padding-left:24px;}
 	.input_form div.list .item div.tit select {padding-left:24px; font-size:20px; line-height:29px;}
 	.input_form div.list .item div.set_ipt input {height:29px; font-size:20px;}
 	.input_form div.list .item div.set_ipt input::placeholder {color:#888;}
@@ -520,6 +522,7 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .footer_wrap div.footer .private {white-space:nowrap;}
 .footer_wrap div.footer .private span {position:relative; color:#fff;}
 .footer_wrap div.footer .private span + span {margin-left:10px; padding-left:11px;}
+.footer_wrap div.footer .private span:first-of-type + span {font-size:21px; font-weight:bold;}
 .footer_wrap div.footer .private span + span::before {content:""; display:block; position:absolute; top:50%; left:0; width:1px; height:50%; background-color:#fff; transform:translate(-50%,-50%);}
 .footer_wrap div.footer .private a {color:#fff; text-decoration:none;}
 
@@ -970,6 +973,8 @@ table.dataTable tbody td:first-of-type {padding-left:2em; text-align:left;}
 .form_wrap .row .ipt_form input {border:0 none; line-height:72px;}
 .form_wrap .row .ipt_form input::placeholder {color:#999; font-size:18px; line-height:inherit;}
 .form_wrap .row .ipt_form .ipt_wrap {display:flex; align-items:center; gap:10px; width:100%;}
+.form_wrap .row .ipt_form .ipt_wrap div.tel {padding:12px 0; border-bottom:1px solid #ddd;}
+.form_wrap .row .ipt_form .ipt_wrap div.tel span {display:block; width:144px; height:72px; padding-left:24px; font-size:20px; line-height:72px; font-weight:normal; white-space:nowrap;}
 
 .form_wrap .row .ipt_form .select_set {width:100%; padding:12px 0; border-bottom:1px solid #ddd;}
 .form_wrap .row .ipt_form .select_set select {position:relative; width:100%; height:72px; padding:0 24px; border:0 none; color:#000; font-size:20px; background:url('../images/ico_arrow_u.png') no-repeat right 24px center / 36px 36px;}
@@ -990,6 +995,11 @@ table.dataTable tbody td:first-of-type {padding-left:2em; text-align:left;}
 	.form_wrap .row .ipt_form .textarea_set {padding:0;}
 	.form_wrap .row .ipt_form .textarea_set textarea {width:100%; height:240px; padding:10px; font-size:0.875em;}
     .form_wrap .row .ipt_form input {height:40px;}
+
+	.form_wrap .row .ipt_form .ipt_wrap {display:flex; align-items:center; gap:10px; width:100%;}
+	.form_wrap .row .ipt_form .ipt_wrap div.tel {padding:0; border-bottom:1px solid #ddd;}
+	.form_wrap .row .ipt_form .ipt_wrap div.tel span {display:block; width:60px; height:40px; padding:0; font-size:0.875em; line-height:40px;}
+
     .form_wrap .row .ipt_form .ipt_set button.btn_address {height:40px; width:auto; padding:0 2em; font-size:14px;}
     .form_wrap .row .ipt_form .select_set {padding:0;}
     .form_wrap .row .ipt_form .select_set select {height:40px; padding:0; font-size:14px;}
