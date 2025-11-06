@@ -456,8 +456,10 @@ div.layer.full .close button::after {transform:translate(-50%,-50%) rotate(-45de
 .refund_content .chk_wrap div {display:flex; align-items:center; gap:0 6px;}
 .refund_content .chk_wrap label {display:flex; justify-content:center; align-items:center; position:relative; width:24px; height:24px;}
 .refund_content .chk_wrap label input {position:absolute; top:0; left:0; widtH:0; height:0; opacity:0;}
-.refund_content .chk_wrap label span.checkmark {width:24px; min-width:24px; height:24px; background:url('../images/ico_check_off_new.png') no-repeat center center / contain;}
+.refund_content .chk_wrap label span.checkmark {position:relative; width:24px; min-width:24px; height:24px; background:url('../images/ico_check_off_new.png') no-repeat center center / contain;}
+/* .refund_content .chk_wrap label span.checkmark::before {content:""; display:block; position:absolute; top:50%; left:50%; width:70%; height:70%; border-radius:100%; transform:translate(-50%,-50%); z-index:-1;} */
 .refund_content .chk_wrap label input:checked + span.checkmark {background-image:url('../images/ico_check_on_new.png');}
+/* .refund_content .chk_wrap label input:checked + span.checkmark::before {background-color:#000;} */
 .refund_content .chk_wrap button {width:auto; height:20px; line-height:1em;}
 .refund_content .chk_wrap button span {display:block; color:#000; font-size:14px; line-height:20px; font-weight:bold;}
 @media only screen and (min-width:720px) {
